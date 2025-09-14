@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐍 贪吃蛇游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐍 贪吃蛇游戏</h1>
+            <div class="game-info">
+                <div class="score-board">
+                    <span class="score">得分: <span id="score">0</span></span>
+                    <span class="level">等级: <span id="level">1</span></span>
+                    <span class="high-score">最高分: <span id="highScore">0</span></span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="game-container">
+                <canvas id="gameCanvas" width="400" height="400"></canvas>
+                
+                <div class="controls">
+                    <button id="startBtn" class="btn btn-primary">开始游戏</button>
+                    <button id="pauseBtn" class="btn btn-secondary" disabled>暂停</button>
+                    <button id="resetBtn" class="btn btn-warning">重置</button>
+                </div>
+
+                <div class="mobile-controls" id="mobileControls">
+                    <div class="control-row">
+                        <button class="control-btn" id="upBtn">↑</button>
+                    </div>
+                    <div class="control-row">
+                        <button class="control-btn" id="leftBtn">←</button>
+                        <button class="control-btn" id="downBtn">↓</button>
+                        <button class="control-btn" id="rightBtn">→</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <h3>游戏说明</h3>
+                <ul>
+                    <li>使用 <strong>方向键</strong> 控制蛇的移动方向</li>
+                    <li>按 <strong>空格键</strong> 暂停/继续游戏</li>
+                    <li>吃到红色食物得分并增长</li>
+                    <li>撞到墙壁或自身游戏结束</li>
+                    <li>每得50分升一级，速度加快</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2024 贪吃蛇游戏 | 使用 HTML5 Canvas + JavaScript 开发</p>
+        </footer>
+    </div>
+
+    <script src="utils.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
